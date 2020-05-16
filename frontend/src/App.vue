@@ -33,7 +33,6 @@ export default {
     }),
   methods: {
     sendMessage() {
-      console.log("message received", this.draftMessage);
       const message = {msg: this.draftMessage, id: Date.now(), sentByMe: true}
       this.messages.push(message);
       this.draftMessage = "";
