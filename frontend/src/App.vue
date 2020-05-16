@@ -43,7 +43,7 @@ export default {
 
 <style>
 .extendMarginLeft {
-  margin-left: 3.0625rem;
+  margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
 
