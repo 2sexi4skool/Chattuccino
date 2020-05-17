@@ -35,9 +35,7 @@
         <h1 style="font-weight: 400;">Chattuccino</h1>
       </div>
       <v-spacer></v-spacer>
-      <div>
-        Selected Room: {{selectedChatRoom}}
-      </div>
+      <div>Selected Room: {{ selectedChatRoom }}</div>
     </v-app-bar>
     <v-content class="mx-4" style="height: 100px;">
       <div ref="messagesBox" class="overflow-y-auto px-8" style="height: 100%;">
@@ -125,13 +123,11 @@ export default {
       this.selectRoomDialog = false;
     },
     handleIncomingMessage(msg) {
-
       msg.sentByMe = msg.sentBy === this.userId ? true : false;
       this.messages.push(msg);
       this.$nextTick(() =>
         this.$refs.messagesBox.scroll(0, this.$refs.messagesBox.scrollHeight)
       );
-
     }
   },
   filters: {
@@ -144,8 +140,8 @@ export default {
       window.localStorage.setItem("CHATTUCINO_USER_ID", newUserId);
     }
 
-    if(!this.selectedChatRoom) {
-      this.selectRoomDialog = true
+    if (!this.selectedChatRoom) {
+      this.selectRoomDialog = true;
     }
 
     this.userId = window.localStorage.getItem("CHATTUCINO_USER_ID");
