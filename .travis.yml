@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  yarn: true
+install:
+  - cd ./frontend && yarn install && cd -
+  - yarn build-client
+deploy:
+  provider: cloudfoundry
+  username: apikey
+  password: $BX_IAM_ID
+  api: https://api.eu-gb.cf.cloud.ibm.com
+  organization: francis.powlesland1@ibm.com
+  space: dev
+  app_name: chattucino
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
