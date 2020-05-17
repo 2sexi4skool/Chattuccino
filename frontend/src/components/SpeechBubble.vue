@@ -4,7 +4,7 @@
     :style="{ backgroundColor: color }"
   >
     <div class="messageContent">{{ message }}</div>
-    <div :style="suffixPosition">{{suffix}}</div>
+    <div :style="suffixPosition">{{ suffix }}</div>
   </div>
 </template>
 
@@ -15,10 +15,9 @@ export default {
     suffixPosition() {
       return {
         float: this.arrowDirection,
-        fontSize: '.7rem',
-        color: '#071E22DE',
-        padding: '0 .5rem'
-        
+        fontSize: ".7rem",
+        color: "#071E22DE",
+        padding: "0 .5rem"
       };
     }
   }
@@ -27,9 +26,9 @@ export default {
 
 <style scoped>
 .messageContent {
-  padding: .5rem;
+  padding: 0.5rem;
   overflow-wrap: break-word;
-  color: #071E22;
+  color: #071e22;
 }
 
 .speechbubble {
