@@ -7,8 +7,6 @@ install:
   - mkdir public
   - cd ./frontend && yarn install && cd -
   - yarn build-client
-  script:
-  - echo "Skipping tests"
 deploy:
   provider: cloudfoundry
   username: apikey
