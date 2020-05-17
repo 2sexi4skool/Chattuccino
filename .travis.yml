@@ -4,6 +4,7 @@ node_js:
 cache:
   yarn: true
 install:
+  - mkdir public
   - cd ./frontend && yarn install && cd -
   - yarn build-client
 deploy:
